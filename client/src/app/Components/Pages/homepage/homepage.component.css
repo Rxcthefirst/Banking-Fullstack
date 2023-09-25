@@ -1,0 +1,31 @@
+a.login {
+    transition-duration: 0.4s;
+    border: 2px solid #853900; 
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 12px 28px;
+    background-color: #853900; 
+    color: white;
+}
+
+a.login:hover{
+  background-color: rgb(192, 141, 0); 
+  color: white;
+  border-color: rgb(192, 141, 0);
+}
+
+a.register {
+    transition-duration: 0.4s;
+    border: 2px solid #4647a3; 
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 12px 28px;
+    background-color: #4647a3; 
+    color: white;
+}
+
+a.register:hover{
+  background-color: #6567e9; 
+  color: white;
+  border-color: #6567e9;
+}

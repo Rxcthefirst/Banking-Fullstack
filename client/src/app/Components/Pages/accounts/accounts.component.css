@@ -1,0 +1,179 @@
+.all-accounts-overview-container .account-overview-summary.single-account-summary {
+    box-shadow: 0px 0px 10px 1px;
+    padding: 15px 12px 0 12px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .all-accounts-overview-container {
+    --z-index-more-menu-override: 9998;
+    margin-top: 1.875em;
+    margin-bottom: 1.875em;
+  }
+
+  .all-accounts-overview-container .account-overview-summary.single-account-summary {
+    box-shadow: 0px 0px 10px 1px;
+    padding: 15px 12px 0 12px;
+  }
+
+  .mds-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .mds-col-at-1200-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .header-title .account-name {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .account-overview-summary .ACTITLE, .accounts-slideIn-container .ACTITLE, .personal-overview .ACTITLE {
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+    height: 200px;
+  }
+
+  .col-lg-5 {
+    width: 41.66666667%;
+  }
+
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
+    float: left;
+  }
+
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: .0625rem;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .primary-part-container .primary-part {
+    display: flex;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .primary-part-container ul, .all-accounts-overview-container .account-overview-summary .secondary-part-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .all-accounts-overview-container .account-overview-summary .primary-part-container .primary-part .primary-item {
+    padding-bottom: .8rem;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .primary-part-container .primary-part .flex-container.column-reverse {
+    flex-flow: column;
+      flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .primary-part-container .primary-part .flex-container .current-balance-label {
+    margin: 0;
+  }
+
+  .all-accounts-overview-container .account-overview-summary.single-account-summary .CRNTBAL {
+    font-size: 1.5rem;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .primary-part-container .primary-part .primary-item:last-of-type {
+    padding-bottom: 0;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .primary-part-container .primary-part .flex-container.column-reverse {
+    flex-flow: column;
+      flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .NOTE {
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-decoration: none;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .primary-part-container .primary-part .flex-container {
+    display: flex;
+  }
+
+  .col-lg-7 {
+    width: 58.33333333%;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .secondary-part-container .secondary-part {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .all-accounts-overview-container .account-overview-summary.CPO .secondary-part li {
+    flex-grow: unset;
+  }
+
+  .all-accounts-overview-container .account-overview-summary.single-account-summary .secondary-part li {
+    flex-grow: 1;
+    min-width: 50%;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .secondary-part-container .secondary-part .column-reverse .column-wrap {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .all-accounts-overview-container .account-overview-summary .secondary-part-container .secondary-part .column-reverse .column-wrap .secondary-label {
+    order: 2;
+  }
+
+  .account-overview-summary .ACCTBAL, .accounts-slideIn-container .ACCTBAL, .personal-overview .ACCTBAL {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-decoration: none;
+  }
+
+  #singleSummaryHeaderName {
+    margin-left: 10px;
+  }
+
+  #container {
+    display: inline-flex;
+    align-items: top;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+
+  button {
+      transition-duration: 0.4s;
+      border: 2px solid #853900; 
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 12px 28px;
+      background-color: #853900; 
+      color: white;
+  }
+  button:hover{
+    background-color: rgb(192, 141, 0); 
+    color: white;
+    border-color: rgb(192, 141, 0);
+  }
+
+  .floatleft {
+    text-align: left;
+}

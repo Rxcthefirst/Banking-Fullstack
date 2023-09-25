@@ -1,0 +1,13 @@
+<h3>Return to Account Summary:</h3>
+<a routerLink="/summary" class="button">Summary</a>
+<div class="centerbox"><h1>My Profile</h1>
+<div class="floatleft"><h3>Name: </h3>{{ this.profile.firstname }} {{ this.profile.surname }}</div>
+<div class="floatleft"><h3>Email: </h3>{{ this.profile.email }}</div>
+<div class="floatleft"><h3>Address1: </h3>{{ this.profile.address1 }}</div>
+<div class="floatleft"><h3>Address2: </h3>{{ this.profile.address2 }}</div>
+<div class="floatleft">
+    <span><h3>City: </h3>{{ this.profile.city }}</span>
+    <span><h3>State: </h3>{{ this.profile.state }}</span>
+    <span><h3>Zipcode: </h3>{{ this.profile.zipcode }}</span>
+</div>
+</div>

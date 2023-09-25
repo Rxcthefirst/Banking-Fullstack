@@ -1,0 +1,30 @@
+<h3>Return to Account Summary:</h3>
+<a routerLink="/summary" class="button">Summary</a>
+<div class="centerbox">
+    <h1>Send Money to Another User</h1>
+    <br />
+      <!-- Login Form -->
+      <form>
+        <label>Send from</label>
+        <br />
+        <select [(ngModel)]="selectedAccountId">
+          <option *ngFor="let a of accounts" [ngValue]="a">{{a.name}}   (...{{a.id}})   {{a.balance}}</option>
+        </select>
+        <input type="number" id="fromId" [(ngModel)]="fromId" name="fromId" placeholder="toId">
+        <br />
+        <label>Transfer to</label>
+        <br />
+        <input type="text" id="toId" [(ngModel)]="toId" name="toId" placeholder="recipient email">
+        <br />
+        <label>Amount</label>
+        <br />
+        <input type="number" id="password" [(ngModel)]="amount" name="amount" placeholder="amount">
+        <br />
+        <label>Description</label>
+        <br />
+        <input type="text" id="surname" [(ngModel)]="description" name="description" placeholder="description">
+        <br />
+        <input type="submit" (click)=onSubmit() class="submit" value="Submit">
+      </form>
+</div>
+   

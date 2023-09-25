@@ -1,0 +1,30 @@
+<div class="centerbox">
+    <h1>Login</h1>
+    <br />
+<form class="user-login" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <div>
+        <label>Username</label>
+        <br />
+        <input type="username" formControlName="username" class="form-control" placeholder="Enter Username">
+        <div *ngIf="submitted && formControl['username'].errors" class="invalid-feedback">
+            <div *ngIf="formControl['username'].errors['required']">User name is required!</div>
+        </div>
+    </div>
+    
+    <div>
+        <label>Password</label>
+        <br />
+        <input type="password" id="password" formControlName="password" class="form-control" placeholder="Enter Password">
+        <div *ngIf="submitted && formControl['password'].errors" class="invalid=feedback">
+            <div *ngIf="formControl['password'].errors['required']">Password is requried!</div>
+        </div>
+    </div>
+    <br>
+    <div class="button-container">
+        <button class="login" type="submit">Login</button>
+        <br />
+        <br />
+        <button class="register" type="button" (click)="onRedirect()">Register</button>
+    </div>
+</form>
+</div>

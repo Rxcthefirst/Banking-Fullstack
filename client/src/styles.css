@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+  body 
+  {
+    margin: 0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  }
+  .center {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .centerbox {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 1px;
+    border-radius: 5px;
+  }
+
+  .dark-mode {
+    background-color: #1f2425;
+    color: #dfe6e9;
+  }
+  
+  .light-mode {
+    background-color: #dfe6e9;
+    color: #171a1b;
+  }
+
+  body:not(.dark-mode-preloading) {
+    transition: all 0.3s linear;
+  }
+
+  body:not(.dark-mode-preloading) input{
+    transition: all 0.3s linear;
+  }
+
+  body:not(.dark-mode-preloading) select{
+    transition: all 0.3s linear;
+  }
+  
+  body.dark-mode input{
+    background-color: #384244;
+    color: #dfe6e9;
+    border-bottom: 1px solid #536063;
+  }
+  
+  body.light-mode input{
+    background-color: #c6ced1;
+    color: #171a1b;
+    border-bottom: 1px solid black;
+  }
+
+  body.dark-mode select{
+    background-color: #384244;
+    color: #dfe6e9;
+    border-bottom: 1px solid #536063;
+  }
+  
+  body.light-mode select{
+    background-color: #c6ced1;
+    color: #171a1b;
+    border-bottom: 1px solid black;
+  }

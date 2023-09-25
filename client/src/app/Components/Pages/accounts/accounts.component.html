@@ -1,0 +1,136 @@
+<div class="button-container">
+    <button class="button" type="button" (click)="onProfile()">My Profile</button>
+    <br />
+    <br />
+    <button class="button" type="button" (click)="onTransfer()">Transfer money</button>
+    <br />
+    <br />
+    <button class="button" type="button" (click)="onSendMoney()">Send money</button>
+</div>
+<div class="account-overview-summary single-account-summary CPO clearfix">
+    <h2 id="singleSummaryHeaderName" class="ACTICLE account-name">My Accounts</h2>
+</div>
+<ul class="accounts">
+    <li *ngFor="let account of accounts">
+        <button type="button" (click)="onSelect(account)">
+            <span class="name">{{account.name}} (...</span>
+            <span class="badge">{{account.id}})</span>
+        </button>
+    </li>
+</ul>
+<section id="container" *ngIf="selectedAccount">
+<div id="W1" class="cxo-ovd-summar clearfix" data-has-view="true">
+    <div class="all-accounts-overview-container clearfix" id="allAccountsOverview" data-is-view="true" data-component-name="ROOT/SITE/dashboard/accounts/accounts|accountsSummary|ASSETS_AND_LIABILITIES_OVERVIEW|0f3e9c34-3f96-415e-82c7-566e982fa5be">
+        <div id="perf_metrics" data-shown-at="cpo-ovd"></div>
+        <div>
+            <div class="single-blade-container">
+                <div class="account-overview-summary single-account-summary CPO clearfix">
+                    <div class="mds-row">
+                        <div class="mds-col-at-576-6 mds-col-at-768-8 mds-col-at-992-8 mds-col-at-1200-8 header-title" id="singleSummaryAccountName">
+                            <h2 class="ACTITLE account-name" aria-level="2" tabindex="-1" id="singleSummaryHeaderName">RCHB: {{selectedAccount.name | uppercase}} (...{{selectedAccount.id}})</h2>  
+                            <span class="routing-info">
+                                <!--<mds-link class="mds-link-font mds-d-print-none mds-link--cpo" id="singleAccountNameMask" leading-pipe="true" end-icon="ico_chevron_right" text="See full account number" accessible-text="Opens dialog:" is-button="false" href="javascript:void(0)" underline="false" accessible-text-prefix="" tab-focusable="true" inverse="false" trailing-pipe="false" inactive="false" truncation="none">
+                                </mds-link>-->
+                            </span> 
+                        </div>
+                        <div class="mds-col-at-576-4 header-tooltip"></div>
+                    </div>
+                    <div></div>
+                    <div class="row overview-items">
+                        <div class="accountItems">
+                            <div class="primary-part-container col-xs-12 col-sm-5 col-md-6 col-lg-5">
+                                <ul class="primary-part" role="none"> 
+                                    <li class="" role="none">  
+                                        <div class="primary-item">
+                                            <div class="flex-container column-reverse current-balance-cell">
+                                                <span id="accountAvailableBalanceLinkLabel" class="current-balance-label def-link-container">
+                                                    <h3 class="NOTE current-balance-label" aria-level="3">
+                                                        <!--<mds-definition-link id="accountAvailableBalanceLinkLabelDefinitionLinkLarge-0" definition-text="Available balance" tooltip-message="The amount of money in your account that you can use right now. You can find this balance on receipts you receive at ATMs, from a banker at a branch, at chase.com or in the Chase Mobile app." tooltip-placement="below" alignment="left" is-button="false" href="javascript:void(0)" accessible-text-prefix="" tooltip-alignment="left" class="mds-definition-link--cpo">
+                                                        </mds-definition-link>-->
+                                                        Available Balance
+                                                    </h3>
+                                                </span>
+                                                <span id="accountAvailableBalanceLinkValue" class="CRNTBAL current-balance-value">{{selectedAccount.balance | currency}}</span>
+                                            </div>
+                                        </div>
+                                                
+                                        <div class="primary-item secondary-items">
+                                            <div class="flex-container column-reverse current-balance-cell">
+                                                <span id="accountBalanceLinkLabel" class="current-balance-label def-link-container">
+                                                    <h3 class="NOTE current-balance-label" aria level="3">Present Balance</h3>
+                                                </span>
+                                                <span id="accountBalanceLinkValue" class="ACCTBAL">{{selectedAccount.balance | currency}}</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul> 
+                            </div>
+                            <div class="secondary-part-container col-xs-12 col-sm-7 col-md-6 col-lg-7">
+                                <ul class="single-card secondary-part" role="none">
+                                    <li class="blueprint-autopay flex-container column-reverse" id="totalDepositsLabel1" role="none">
+                                        <div class="column-wrap">
+                                            <div class="secondary-label def-link-container">
+                                                <a (click)="onView(income_transactions)" class="NOTE" aria-level="3">Deposits this month</a>    
+                                            </div> 
+                                            <div class="card-chiclet-value ACCTBAL" id="totalDepositsChicklet">   
+                                                <span> 
+                                                    <span class="depositsWithdrawals">+{{income | currency}}</span> 
+                                                </span>  
+                                            </div>   
+                                        </div>
+                                    </li>
+                                    <li class="blueprint-autopay flex-container column-reverse" id="totalWithdrawalsLabel1" role="none">
+                                        <div class="column-wrap">
+                                            <div class="secondary-label def-link-container">
+                                                <h3 class="NOTE" aria-level="3">Withdrawals this month</h3>    
+                                            </div> 
+                                            <div class="card-chiclet-value ACCTBAL" id="totalWithdrawalsChicklet">   
+                                                <span> 
+                                                    <span class="depositsWithdrawals">-{{expenses |currency}}</span> 
+                                                </span>  
+                                            </div>   
+                                        </div>
+                                    </li>
+                                    <li class="blueprint-autopay flex-container column-reverse" id="debitCardCoverageStatusLabel1" role="none">
+                                        <div class="column-wrap">
+                                            <div class="secondary-label def-link-container">
+                                                <h3 class="NOTE with-link" aria-level="3">
+                                            <!--<mds-definition-link id="debitCardCoverageStatusLabelDefinitionLink-secondary" definition-text="Debit card coverage" tooltip-message="This feature of your checking account may cover certain everyday debit card purchases—at our discretion—even if you don't have enough money available.</br></br>If your status is set to &quot;On,&quot; you want us to approve and pay your everyday debit card transactions when you don't have enough money available (fees may apply).</br></br>If it's set to &quot;Off,&quot; you don't want us to approve and pay your everyday debit card transactions when you don't have enough money available. Instead, your debit card purchases will be declined and you won't be charged an insufficient funds fee for these transactions.</br></br>You can change your debit card coverage anytime online or in a branch." tooltip-placement="below" alignment="left" is-button="false" href="javascript:void(0)" accessible-text-prefix="" tooltip-alignment="left" class="mds-definition-link--cpo">
+                                            </mds-definition-link>-->
+                                            Debit card coverage
+                                        </h3>    
+                                    </div> 
+                                    <div class="card-chiclet-value ACCTBAL with-link" id="debitCardCoverageStatusChicklet">
+                                        <!--<mds-icon class="auto-pay-icon is-disabled mds-icon--cpo" type="ico_debit_card_coverage" id="account-thumbnail-debitCardCoverageStatus" size="20" color="default">
+                                        </mds-icon>-->   
+                                        <span> Off </span>  
+                                        <div class="NOTELINK has-inline-link util print-hide">
+                                            <!--<mds-link class="mds-link-font mds-link--cpo" accessible-text="debit card coverage" data-param="662002367" end-icon="ico_chevron_right" id="debitCardCoverageStatus-Link-d392bddf-3d36-4a68-97ca-7119b80c416b" inactive="false" leading-pipe="true" text="Set up" is-button="false" href="javascript:void(0)" underline="false" accessible-text-prefix="" tab-focusable="true" inverse="false" trailing-pipe="false" truncation="none">
+                                            </mds-link>-->
+                                        </div>
+                                    </div>   
+                                </div>
+                            </li>  
+                        </ul>
+                            </div>
+                        </div>
+                        <button type="button" (click)="onView(income_transactions)">View Income</button>
+                        <button type="button" (click)="onView(expense_transactions)">View Expenses</button>
+                    </div>
+                    <div class="action-container overview-cta-num-xs-items-2 util print-hide"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="centerbox" *ngIf="selectedView">
+    <h2>Transactions</h2>
+    <ul class="floatleft">
+        <li *ngFor="let transaction of selectedView">
+            <span><h3>Amount: </h3>{{transaction.amount | currency }}</span>
+            <span><h3>Description: </h3>{{transaction.description}}</span>
+        </li>
+    </ul>
+</section>

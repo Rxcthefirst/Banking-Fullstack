@@ -1,0 +1,96 @@
+<div class="centerbox">
+    <h1>Register an Account</h1>
+    <br />
+<form class="user-register" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <div>
+        <label>First Name</label>
+        <br />
+        <input type="firstname" formControlName="firstname" class="form-control" placeholder="Enter First Name">
+        <div *ngIf="submitted && formControl['firstname'].errors" class="invalid-feedback">
+            <div *ngIf="formControl['firstname'].errors['required']">Fist name is required!</div>
+        </div>
+    </div>
+    
+    <div>
+        <label>Surname</label>
+        <br />
+        <input type="surname" formControlName="surname" class="form-control" placeholder="Enter Surname">
+        <div *ngIf="submitted && formControl['surname'].errors" class="invalid=feedback">
+            <div *ngIf="formControl['surname'].errors['required']">Surname is required!</div>
+        </div>
+    </div>
+    <div>
+        <label>Address1</label>
+        <br />
+        <input type="address1" formControlName="address1" class="form-control" placeholder="Enter address">
+        <div *ngIf="submitted && formControl['address1'].errors" class="invalid-feedback">
+            <div *ngIf="formControl['address1'].errors['required']">Address is required!</div>
+        </div>
+    </div>
+    
+    <div>
+        <label>Address2</label>
+        <br />
+        <input type="address2" formControlName="address2" class="form-control" placeholder="Enter #">
+    </div>
+    <div>
+        <label>City</label>
+        <br />
+        <input type="state" formControlName="state" class="form-control" placeholder="Enter city">
+        <div *ngIf="submitted && formControl['city'].errors" class="invalid-feedback">
+            <div *ngIf="formControl['city'].errors['required']">State is required!</div>
+        </div>
+    </div>
+    <div>
+        <label>State</label>
+        <br />
+        <input type="state" formControlName="state" class="form-control" placeholder="Enter state">
+        <div *ngIf="submitted && formControl['state'].errors" class="invalid-feedback">
+            <div *ngIf="formControl['state'].errors['required']">State is required!</div>
+            <div *ngIf="formControl['state'].errors['maxLength']">Enter abbreviation</div>
+        </div>
+    </div>
+    <div>
+        <label>Zipcode</label>
+        <br />
+        <input type="zipcode" formControlName="zipcode" class="form-control" placeholder="Enter zipcode">
+        <div *ngIf="submitted && formControl['zipcode'].errors" class="invalid=feedback">
+            <div *ngIf="formControl['zipcode'].errors['required']">Zipcode is required</div>
+            <div *ngIf="formControl['zipcode'].errors['minLength']">Invalid zipcode</div>
+            <div *ngIf="formControl['zipcode'].errors['maxLength']">Inavlid zipcode</div>
+        </div>
+    </div>
+    <div>
+        <label>Email</label>
+        <br />
+        <input type="email" formControlName="email" class="form-control" placeholder="Enter email">
+        <div *ngIf="submitted && formControl['email'].errors" class="invalid-feedback">
+            <div *ngIf="formControl['email'].errors['required']">Email is required!</div>
+            <div *ngIf="formControl['email'].errors['emali']">Invalid email</div>
+        </div>
+    </div>
+    <div>
+        <label>Username</label>
+        <br />
+        <input type="username" formControlName="username" class="form-control" placeholder="Enter Username">
+        <div *ngIf="submitted && formControl['username'].errors" class="invalid-feedback">
+            <div *ngIf="formControl['username'].errors['required']"></div>
+        </div>
+    </div>
+    <div>
+        <label>Password</label>
+        <br />
+        <input type="password" formControlName="password" class="form-control" placeholder="Enter Password">
+        <div *ngIf="submitted && formControl['password'].errors" class="invalid=feedback">
+            <div *ngIf="formControl['password'].errors['required']"></div>
+        </div>
+    </div>
+    <br>
+    <div class="button-container">
+        <button class="register" type="submit">Register</button>
+        <br />
+        <br />
+        <button class="login" type="button" (click)="onRedirect()">Login</button>
+    </div>
+</form>
+</div>
